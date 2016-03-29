@@ -106,10 +106,10 @@ pull_webrtc() {
 	if [ -z $1 ]
     then
         echo "gclient sync with newest"
-        gclient sync
+        gclient sync --with_branch_heads
     else
         echo "gclient sync with $1"
-        gclient sync -r $1
+        gclient sync --with_branch_heads -r $1
     fi
 
     # Navigate back
